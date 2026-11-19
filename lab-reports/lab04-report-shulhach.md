@@ -19,3 +19,8 @@
 
 ## 5. Висновок
 Під час виконання лабораторної роботи я набув практичних навичок роботи з Flask та SQLite, навчився проєктувати реляційні бази даних, реалізовувати зв'язки між таблицями та створювати адмін-панель. Виконано Рівень 1 та Рівень 2.
+<img width="1727" height="757" alt="Снимок экрана 2026-11-20 000604" src="https://github.com/user-attachments/assets/88532fca-166e-4f89-bb57-fdcd9f97846a" />
+<img width="1860" height="725" alt="Снимок экрана 2026-11-20 000608" src="https://github.com/user-attachments/assets/35488ab4-0d48-4db3-8fc5-204f71781b4f" />
+<img width="1876" height="623" alt="Снимок экрана 2026-11-20 000613" src="https://github.com/user-attachments/assets/aed7ea5a-515d-4d74-a980-d1e35d11d755" />
+
+
