@@ -1,0 +1,99 @@
+{
+  "info": {
+    "_postman_id": "d56b5ec4-47d7-4c0f-8bc7-6f9eae6a0505",
+    "name": "Lab 5 - API Магазину",
+    "description": "Колекція запитів для Flask REST API магазину. Базова адреса: http://127.0.0.1:5000",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Отримати список клієнтів",
+      "request": {
+        "method": "GET",
+        "header": [{ "key": "Accept", "value": "application/json" }],
+        "url": "{{baseUrl}}/api/v1/clients",
+        "description": "Повертає список усіх клієнтів."
+      },
+      "response": []
+    },
+    {
+      "name": "Отримати список замовлень",
+      "request": {
+        "method": "GET",
+        "header": [{ "key": "Accept", "value": "application/json" }],
+        "url": "{{baseUrl}}/api/v1/orders",
+        "description": "Повертає список усіх замовлень."
+      },
+      "response": []
+    },
+    {
+      "name": "Отримати список товарів",
+      "request": {
+        "method": "GET",
+        "header": [{ "key": "Accept", "value": "application/json" }],
+        "url": "{{baseUrl}}/api/v1/products",
+        "description": "Повертає список усіх товарів. Очікувана відповідь: 200 OK."
+      },
+      "response": []
+    },
+    {
+      "name": "Створити товар",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Accept", "value": "application/json" },
+          { "key": "Content-Type", "value": "application/json" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"title\": \"Навушники JBL\",\n  \"price\": 1800\n}",
+          "options": { "raw": { "language": "json" } }
+        },
+        "url": "{{baseUrl}}/api/v1/products",
+        "description": "Створює товар. Очікувана відповідь: 201 Created."
+      },
+      "response": []
+    },
+    {
+      "name": "Оновити товар за ID",
+      "request": {
+        "method": "PUT",
+        "header": [
+          { "key": "Accept", "value": "application/json" },
+          { "key": "Content-Type", "value": "application/json" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"title\": \"Ноутбук Lenovo оновлений\",\n  \"price\": 26000\n}",
+          "options": { "raw": { "language": "json" } }
+        },
+        "url": "{{baseUrl}}/api/v1/products/1",
+        "description": "Оновлює товар з ID 1. Очікувана відповідь: 200 OK, якщо товар існує."
+      },
+      "response": []
+    },
+    {
+      "name": "Отримати товар за ID",
+      "request": {
+        "method": "GET",
+        "header": [{ "key": "Accept", "value": "application/json" }],
+        "url": "{{baseUrl}}/api/v1/products/1",
+        "description": "Отримує товар з ID 1. Для перевірки помилки 404 заміни 1 на 999."
+      },
+      "response": []
+    },
+    {
+      "name": "Видалити товар за ID (тест 404)",
+      "request": {
+        "method": "DELETE",
+        "header": [{ "key": "Accept", "value": "application/json" }],
+        "url": "{{baseUrl}}/api/v1/products/999",
+        "description": "За замовчуванням використовує ID 999, щоб не видалити реальний тестовий товар. Очікувана відповідь для відсутнього товару: 404. Для успішного видалення заміни 999 на наявний ID."
+      },
+      "response": []
+    }
+  ],
+  "variable": [
+    { "key": "baseUrl", "value": "http://127.0.0.1:5000", "type": "string" }
+  ]
+}
